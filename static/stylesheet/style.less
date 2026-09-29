@@ -837,10 +837,27 @@ div.gallery a {
   display: flex;
 }
 
+.lightbox .lightbox-stage {
+  display: grid;
+  max-width: 92vw;
+  max-height: 86vh;
+  pointer-events: none;
+}
+
 .lightbox img.lightbox-img {
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
   max-width: 92vw;
   max-height: 86vh;
   border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.lightbox img.lightbox-img.visible {
+  opacity: 1;
 }
 
 .lightbox .lightbox-caption {
