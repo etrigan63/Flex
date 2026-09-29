@@ -16,7 +16,15 @@ hr {
 
 aside {
   background-color: @sidebar-bg-dark-theme;
-  color: @sidebar-text-color;
+  color: @sidebar-text-color-dark-theme;
+
+  a {
+    color: @sidebar-link-color-dark-theme;
+  }
+
+  a:hover {
+    color: @sidebar-link-hover-color-dark-theme;
+  }
 
   form.navbar-search input#tipue_search_input {
     background-color: @very-dark-grey;
@@ -25,6 +33,20 @@ aside {
 }
 
 main {
+  a {
+    color: @link-color-dark-theme;
+  }
+
+  a:hover {
+    color: @link-hover-color-dark-theme;
+  }
+
+  article {
+    header p {
+      color: @header-text-color-dark-theme;
+    }
+  }
+
   nav {
     border-bottom-color: @nav-border-color-dark-theme;
   }
@@ -37,22 +59,23 @@ main {
 
   article {
     kbd {
-      background-color: #080808;
-      color: @light-grey;
+      background-color: @code-bg-color-dark-theme;
+      color: @code-text-color-dark-theme;
     }
 
     blockquote, pre {
-      border-left: 8px solid #ffffff33;
+      border-left: 8px solid #565f89;
     }
 
     *:not(pre) > code {
-      background-color: #080808;
-      border-color: #000;
+      color: @code-text-color-dark-theme;
+      background-color: @code-bg-color-dark-theme;
+      border-color: @code-border-color-dark-theme;
     }
 
     div#tipue_search_content .tipue_search_result {
       span.tipue_search_content_bold {
-        color: white;
+        color: #c0caf5;
       }
     }
 
@@ -101,7 +124,29 @@ main {
   }
 
   footer {
+    color: @footer-text-color-dark-theme;
     border-top-color: @footer-border-color-dark-theme;
+  }
+}
+
+a.btn,
+section#isso-thread section.auth-section p.post-action input {
+  background-color: @btn-bg-dark-theme;
+  color: @btn-text-color-dark-theme;
+}
+
+a.btn:hover {
+  background-color: @btn-hover-color-dark-theme;
+}
+
+.tag-cloud {
+  a {
+    background-color: @tag-bg-dark-theme;
+    color: @tag-text-color-dark-theme;
+  }
+
+  a:hover {
+    background-color: @tag-hover-color-dark-theme;
   }
 }
 

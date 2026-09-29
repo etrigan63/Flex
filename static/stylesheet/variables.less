@@ -1,62 +1,87 @@
-// Flex colors
-@orange: #D9411E;
-@light-orange: #FF5A09;
+// Flex colors — TokyoNight Day (light scheme) / TokyoNight Storm (dark scheme)
+// Palette sources: tokyonight.nvim extras/lua/tokyonight_{day,storm}.lua
+@orange: #2e7de9;            // day blue (light-mode accent)
+@light-orange: #358aff;      // day bright blue (light-mode accent hover)
 @white:  #ffffff;
-@grey: #333333;
-@light-grey:  #eeeeee;
-@med-grey:  #999999;
-@dark-grey: #242121;
-@solid-dark-grey: #222222;
-@very-dark-grey: #1a1a1a;
+@grey: #3b4261;              // storm gutter
+@light-grey:  #b4b5b9;       // day border
+@med-grey:  #848cb5;         // day comment
+@dark-grey: #1f2335;         // storm dark bg
+@solid-dark-grey: #292e42;   // storm highlight
+@very-dark-grey: #1b1e2d;    // storm darkest bg
 
 // Font family
 @sans: 'Source Sans Pro', 'Roboto', 'Open Sans', 'Liberation Sans', 'DejaVu Sans', 'Verdana', 'Helvetica', 'Arial', sans-serif;
 @mono: 'Source Code Pro', 'Consolas', 'Liberation Mono', 'DejaVu Sans Mono', monospace;
 
 // Body
-@body-bg: @white;
-@body-bg-dark-theme: @grey;
-@text-color: @dark-grey;
-@text-color-dark-theme: @light-grey;
+@body-bg: #e1e2e7;                    // day bg
+@body-bg-dark-theme: #24283b;         // storm bg
+@text-color: #3760bf;                 // day fg
+@text-color-dark-theme: #c0caf5;      // storm fg
 
 // Links
-@link-color: @orange;
-@link-hover-color: @light-orange;
+@link-color: #2e7de9;                 // day blue
+@link-hover-color: #358aff;           // day bright blue
+@link-color-dark-theme: #7aa2f7;      // storm blue
+@link-hover-color-dark-theme: #89ddff; // storm bright blue (blue5)
 
 // Sidebar (aside)
-@sidebar-bg: @grey;
-@sidebar-bg-dark-theme: @solid-dark-grey;
-@sidebar-text-color: @white;
-@sidebar-link-color: @white;
-@sidebar-link-hover-color: @light-grey;
+@sidebar-bg: #d0d5e3;                          // day sidebar bg
+@sidebar-bg-dark-theme: #1f2335;               // storm sidebar bg
+@sidebar-text-color: #6172b0;                  // day sidebar fg
+@sidebar-text-color-dark-theme: #a9b1d6;       // storm sidebar fg
+@sidebar-link-color: #2e7de9;                  // day blue
+@sidebar-link-color-dark-theme: #7aa2f7;       // storm blue
+@sidebar-link-hover-color: #007197;            // day cyan
+@sidebar-link-hover-color-dark-theme: #89ddff; // storm bright blue
 
 // Buttons
-@btn-bg: @orange;
-@btn-text-color: @white;
-@btn-hover-color: @light-orange;
+@btn-bg: #2e7de9;
+@btn-bg-dark-theme: #7aa2f7;
+@btn-text-color: #ffffff;
+@btn-text-color-dark-theme: #1f2335;
+@btn-hover-color: #358aff;
+@btn-hover-color-dark-theme: #89ddff;
 
 // Tag cloud
-@tag-bg: @orange;
-@tag-text-color: @white;
-@tag-hover-color: @light-orange;
+@tag-bg: #2e7de9;
+@tag-bg-dark-theme: #7aa2f7;
+@tag-text-color: #ffffff;
+@tag-text-color-dark-theme: #1f2335;
+@tag-hover-color: #358aff;
+@tag-hover-color-dark-theme: #89ddff;
 
 // Header
-@header-text-color: @med-grey;
+@header-text-color: #848cb5;              // day comment
+@header-text-color-dark-theme: #565f89;   // storm comment
 
 // Footer
-@footer-text-color: @med-grey;
-@footer-border-color: @light-grey;
-@footer-border-color-dark-theme: @solid-dark-grey;
+@footer-text-color: #848cb5;              // day comment
+@footer-text-color-dark-theme: #565f89;   // storm comment
+@footer-border-color: #b4b5b9;            // day border
+@footer-border-color-dark-theme: #292e42; // storm highlight
 
 // Relative posts
-@rel-post-border-color: @light-grey;
-@rel-post-border-color-dark-theme: @solid-dark-grey;
+@rel-post-border-color: #b4b5b9;            // day border
+@rel-post-border-color-dark-theme: #292e42; // storm highlight
 
 // Nav
-@nav-border-color: @light-grey;
-@nav-border-color-dark-theme: @solid-dark-grey;
+@nav-border-color: #b4b5b9;            // day border
+@nav-border-color-dark-theme: #292e42; // storm highlight
 
-// Social buttons
+// Inline code / kbd (light)
+@code-text-color: #f52a65;  // day red
+@code-bg-color: #d0d5e3;    // day dark bg
+@code-border-color: #b4b5b9; // day border
+@kbd-text-color: #6172b0;   // day fg (muted)
+
+// Inline code / kbd (dark)
+@code-text-color-dark-theme: #c0caf5;   // storm fg
+@code-bg-color-dark-theme: #1f2335;     // storm dark bg
+@code-border-color-dark-theme: #1d202f; // storm border
+
+// Social buttons (brand colors, unchanged)
 
 @email-bg-color: #578ad6;
 @facebook-bg-color: #3e5b98;
@@ -84,16 +109,16 @@
 @flickr-bg-color: #ff0084;
 @lastfm-bg-color: #d92323;
 
-// Admonition colors
-@admonition-generic-color: @dark-grey;
-@admonition-generic-color-dark-theme: @light-grey;
-@admonition-generic-bg-color: #cccccc;
-@admonition-generic-bg-color-dark-theme: #404040;
+// Admonition colors (tints mixed from the TokyoNight palettes)
+@admonition-generic-color: #6172b0;
+@admonition-generic-color-dark-theme: #c0caf5;
+@admonition-generic-bg-color: #d0d5e3;
+@admonition-generic-bg-color-dark-theme: #292e42;
 
-@admonition-attention-color: #856404;
-@admonition-attention-color-dark-theme: #fbda7a;
-@admonition-attention-bg-color: #fff3cd;
-@admonition-attention-bg-color-dark-theme: #4a3900;
+@admonition-attention-color: #8c6c3e;
+@admonition-attention-color-dark-theme: #e0af68;
+@admonition-attention-bg-color: #d7d4d3;
+@admonition-attention-bg-color-dark-theme: #5c5048;
 @admonition-attention-icon: "\f071\00a0 ";
 
 @admonition-caution-color: @admonition-attention-color;
@@ -108,10 +133,10 @@
 @admonition-warning-bg-color-dark-theme: @admonition-attention-bg-color-dark-theme;
 @admonition-warning-icon: @admonition-attention-icon;
 
-@admonition-danger-color: #721c24;
-@admonition-danger-color-dark-theme: #ebadb3;
-@admonition-danger-bg-color: #f8d7da;
-@admonition-danger-bg-color-dark-theme: #28070a;
+@admonition-danger-color: #f52a65;
+@admonition-danger-color-dark-theme: #f7768e;
+@admonition-danger-bg-color: #e3ccd7;
+@admonition-danger-bg-color-dark-theme: #633f54;
 @admonition-danger-icon: "\f06a\00a0 ";
 
 @admonition-error-color: @admonition-danger-color;
@@ -120,10 +145,10 @@
 @admonition-error-bg-color-dark-theme: @admonition-danger-bg-color-dark-theme;
 @admonition-error-icon: @admonition-danger-icon;
 
-@admonition-hint-color: #004085 ;
-@admonition-hint-color-dark-theme: #7abaff;
-@admonition-hint-bg-color: #cce5ff;
-@admonition-hint-bg-color-dark-theme: #001933;
+@admonition-hint-color: #007197;
+@admonition-hint-color-dark-theme: #7dcfff;
+@admonition-hint-bg-color: #ccd6e7;
+@admonition-hint-bg-color-dark-theme: #3e4d73;
 @admonition-hint-icon: "\f0eb\00a0 ";
 
 @admonition-tip-color: @admonition-hint-color;
@@ -132,10 +157,10 @@
 @admonition-tip-bg-color-dark-theme: @admonition-hint-bg-color-dark-theme;
 @admonition-tip-icon: @admonition-hint-icon;
 
-@admonition-important-color: #155724;
-@admonition-important-color-dark-theme: #a8eab7;
-@admonition-important-bg-color: #d4edda;
-@admonition-important-bg-color-dark-theme: #122b18;
+@admonition-important-color: #587539;
+@admonition-important-color-dark-theme: #9ece6a;
+@admonition-important-bg-color: #d1d5d2;
+@admonition-important-bg-color-dark-theme: #495a49;
 @admonition-important-icon: "\f05a\00a0 ";
 
 @admonition-note-color: @admonition-important-color;
@@ -144,5 +169,5 @@
 @admonition-note-bg-color-dark-theme: @admonition-important-bg-color-dark-theme;
 @admonition-note-icon: @admonition-important-icon;
 
-@figure-color: #6c757d;
-@figure-color-dark-theme: #bfbfbf;
+@figure-color: #848cb5;
+@figure-color-dark-theme: #a9b1d6;
