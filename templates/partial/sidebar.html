@@ -1,16 +1,16 @@
 <aside>
   <div>
+    <h1>
+      <a href="{{ SITEURL }}/">{{ SITETITLE|default(SITENAME) }}</a>
+    </h1>
+
     <a href="{{ SITEURL }}/">
       {% if SITELOGO %}
-      <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      <img src="{{ SITELOGO }}" alt="{{ SITETITLE|default(SITENAME) }}" title="{{ SITETITLE|default(SITENAME) }}">
       {% else %}
-      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE|default(SITENAME) }}" title="{{ SITETITLE|default(SITENAME) }}">
       {% endif %}
     </a>
-
-    <h1>
-      <a href="{{ SITEURL }}/">{{ SITETITLE }}</a>
-    </h1>
 
     {% if SITESUBTITLE %}
     <p>{{ SITESUBTITLE }}</p>
